@@ -36,8 +36,14 @@ handleFileSelect = evt => {
 
   // files is a FileList of File objects. List some properties.
   var output = [];
+  var allowedTypes = ["ai", "doc", "jpg", "pdf", "png", "psd", "xls"];
   for (var i = 0, f; (f = files[i]); i++) {
     var ext = f.name.split(".").pop();
+
+    if (allowedTypes.indexOf(ext) === -1) {
+      alert("These file extensions are not allowed in our File Uploader!");
+      continue;
+    }
 
     var div = document.createElement("div");
     div.className = "input-container-" + i;
