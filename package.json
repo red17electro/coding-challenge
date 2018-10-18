@@ -1,0 +1,43 @@
+{
+  "name": "ibm-challenge",
+  "description": "This repository consists of a coding challenge, which I have implemented for the IBM Front-End Developer position.",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/red17electro/ibm-challenge.git"
+  },
+  "keywords": [
+    "front-end",
+    "design",
+    "widjet",
+    "challenge",
+    "coding"
+  ],
+  "author": "Server Khalilov",
+  "linkedIn": "https://www.linkedin.com/in/serverkhalilov/",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/red17electro/ibm-challenge/issues"
+  },
+  "homepage": "https://github.com/red17electro/ibm-challenge#readme",
+  "dependencies": {
+    "@babel/core": "^7.1.2",
+    "autoprefixer": "^9.2.1",
+    "browser-sync": "^2.26.3",
+    "cssnano": "^4.1.4",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-responsive": "^2.11.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglifyes": "^0.2.1",
+    "gulp-webp": "^3.0.0"
+  }
+}

@@ -1,2 +1,2 @@
-# coding-challenge
-This repository contains a task, which I implemented as a coding challenge for the interview.
+# ibm-challenge
+This repository consists of a coding challenge, which I have implemented for the IBM Front-End Developer position.

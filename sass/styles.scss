@@ -1,0 +1,214 @@
+/* Import Montserrart Google font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+$mainfont: "Montserrat";
+$colors: (
+  background: #6b91ee,
+  form: #ffffff,
+  formTitle: #3d4852
+);
+
+$borders: 20px;
+@function color($color-name) {
+  @return map-get($map: $colors, $key: $color-name);
+}
+body,
+html {
+  height: 100%;
+}
+body {
+  font-family: $mainfont;
+  // to get rid of the margin that is added by the browser default
+  margin: 0;
+  background-color: color(background);
+}
+main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  div#form > h2 {
+    font-size: 14px;
+    color: color(formTitle);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.857;
+    text-align: center;
+    z-index: 4;
+    position: relative;
+    padding: 12px;
+  }
+  div#form {
+    width: 350px;
+    height: 100%; // 410px;
+    position: relative;
+    background-color: color(form);
+    border-radius: $borders;
+    box-shadow: 0px 4px 6px 0px rgba(51, 46, 58, 0.1);
+    z-index: 3;
+  }
+  section#section {
+    background-color: rgb(107, 145, 238);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 420px;
+    min-height: 480px;
+    margin-left: -210px;
+    margin-top: -240px;
+    z-index: 2;
+  }
+}
+div#list {
+  position: relative;
+}
+div#dragAndDrop {
+  border-width: 2px;
+  border-color: rgba(104, 142, 232, 0.302);
+  border-style: dashed;
+  border-radius: 16px;
+  margin-top: 30px;
+  width: 296px;
+  height: 146px;
+  position: relative;
+  left: (350px - 296px) / 2;
+  bottom: 25px;
+  z-index: 7;
+  h2 {
+    font-size: 14px;
+    color: color(formTitle);
+    text-transform: uppercase;
+    line-height: 1.857;
+    letter-spacing: 1.8px;
+    text-align: center;
+    padding: 75px;
+    top: -35px;
+    position: absolute;
+    z-index: 8;
+    label {
+      color: #b4c5f2;
+      cursor: pointer;
+    }
+    label:hover {
+      text-decoration: underline;
+    }
+    #file_input_id {
+      display: none;
+    }
+  }
+}
+/* ICONS STYLES */
+.svg {
+  height: 38px;
+  width: 30px;
+  position: relative;
+  top: -10px;
+  left: -10px;
+}
+[class^="input-container-"] {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+ul {
+  list-style: none;
+  li {
+    font-size: 13px;
+    width: 82%;
+  }
+}
+/* PSD, DOC ICON */
+.img-psd,
+.img-doc {
+  fill: #4886c4;
+  .st0 {
+    fill: #e8eff8;
+  }
+  .st1 {
+    fill: #518cc7;
+  }
+}
+/* PDF ICON */
+.img-pdf {
+  fill: #ec7570;
+  .st0 {
+    fill: #f8e5de;
+  }
+  .st1 {
+    fill: #ee827e;
+  }
+}
+/* PNG ICON */
+.img-png,
+.img-ai {
+  fill: #ebc867;
+  .st0 {
+    fill: #faf3dc;
+  }
+  .st1 {
+    fill: #efd386;
+  }
+}
+/* XLS ICON */
+.img-xls {
+  fill: #76ec70;
+  .st0 {
+    fill: #dff8de;
+  }
+  .st1 {
+    fill: #17dd05;
+  }
+}
+/* JPG ICON */
+.img-jpg {
+  fill: #ec70ca;
+  .st0 {
+    fill: #f8def0;
+  }
+  .st1 {
+    fill: #dd059d;
+  }
+}
+/* Status styles */
+.status {
+  width: 16px;
+  height: 16px;
+  top: 0px;
+  left: -20px;
+}
+.inprogress {
+  .st0 {
+    fill: rgb(237, 102, 95);
+  }
+}
+.completed {
+  .st0 {
+    fill: #6cc08a;
+  }
+}
+/* Progress Bar styles */
+.progress_bar {
+  margin: 5px 0;
+  background-color: #6cc08a;
+  font-size: 14px;
+  clear: both;
+  transition: opacity 1s linear;
+  height: 2px;
+  width: 255px;
+  opacity: 0;
+}
+.progress_bar.loading {
+  background-color: #fbe0df;
+  opacity: 1;
+}
+.progress_bar .percent {
+  background-color: #ed665f;
+  height: 2px;
+  width: 0;
+  opacity: 1;
+}
+/* File Name Styles */
+.fileName {
+  font-weight: bold;
+  border: none;
+  width: 90%;
+}
