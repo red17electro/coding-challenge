@@ -62,7 +62,16 @@ Afterwards, the fresh version will appear under the `dist` directory.
 
 ## Running
 
-Now you can run the actual project. As it is under `gulp`, the latest build is located in the directory `dist`. Therefore, start up a simple HTTP server to serve up the site files on your local computer.
+Now you can run the actual project. As it is under `gulp`, the latest build is located in the directory `dist`. Therefore, you will have to start up a simple HTTP server to serve up the site files on your local computer.
+
+##### First option:
+You can either select a server of your own, or just run the following command:
+
+`npm start`.
+
+It will run an http-server available at `http://localhost:8000`, which is configured by `http-server` package.
+
+##### Second option:
 
 If you are using `vscode`, this plugin might be helpful:
 `https://github.com/ritwickdey/vscode-live-server`

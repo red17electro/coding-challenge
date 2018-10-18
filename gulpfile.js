@@ -7,7 +7,7 @@ var browserSync = require("browser-sync").create();
 
 /* Gulp plugin, compressed es6 + code. */
 
-var uglifyes = require("gulp-uglifyes");
+const terser = require("gulp-terser");
 
 /* A modular minifier, built on top of the PostCSS ecosystem */
 
@@ -16,10 +16,6 @@ var cssnano = require("cssnano");
 /* Parse CSS and add vendor prefixes to CSS rules using values from the Can I Use website */
 
 var autoprefixer = require("autoprefixer");
-
-/* Minify PNG, JPEG, GIF and SVG images */
-
-var imagemin = require("gulp-imagemin");
 
 /* PostCSS gulp plugin to pipe CSS through several plugins, but parse CSS only once. */
 var postcss = require("gulp-postcss");
@@ -59,23 +55,7 @@ gulp.task("copy-images", function() {
     }
   }
 
-  gulp
-    .src("img/*.svg")
-    .pipe(
-      imagemin([
-        imagemin.svgo({
-          plugins: [
-            {
-              removeViewBox: true
-            },
-            {
-              cleanupIDs: false
-            }
-          ]
-        })
-      ])
-    )
-    .pipe(gulp.dest("dist/img"));
+  gulp.src("img/*.svg").pipe(gulp.dest("dist/img"));
 });
 
 /* Optimizing the scripts */
@@ -83,15 +63,7 @@ gulp.task("scripts-dist", function() {
   gulp
     .src(["js/**/*.js"])
     .pipe(babel())
-    //.pipe(sourcemaps.init())
-    //.pipe(concat('all_main.js'))
-    .pipe(
-      uglifyes({
-        mangle: false,
-        ecma: 6
-      })
-    )
-    //.pipe(sourcemaps.write())
+    .pipe(terser())
     .pipe(gulp.dest("dist/js"));
 });
 

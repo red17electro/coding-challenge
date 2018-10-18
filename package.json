@@ -1,14 +1,10 @@
 {
-  "name": "ibm-challenge",
-  "description": "This repository consists of a coding challenge, which I have implemented for the IBM Front-End Developer position.",
+  "name": "Coding-Challenge",
+  "description": "This repository contains a task, which I implemented as a coding challenge for the interview.",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/red17electro/ibm-challenge.git"
+    "start": "http-server dist -a localhost -p 8000 -c-1"
   },
   "keywords": [
     "front-end",
@@ -20,10 +16,6 @@
   "author": "Server Khalilov",
   "linkedIn": "https://www.linkedin.com/in/serverkhalilov/",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/red17electro/ibm-challenge/issues"
-  },
-  "homepage": "https://github.com/red17electro/ibm-challenge#readme",
   "dependencies": {
     "@babel/core": "^7.1.2",
     "autoprefixer": "^9.2.1",
@@ -36,6 +28,8 @@
     "gulp-postcss": "^8.0.0",
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
-    "gulp-uglifyes": "^0.2.1"
+    "gulp-terser": "^1.1.5",
+    "gulp-uglifyes": "^0.2.1",
+    "http-server": "^0.11.1"
   }
 }
