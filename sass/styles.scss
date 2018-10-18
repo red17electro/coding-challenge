@@ -104,6 +104,10 @@ div#dragAndDrop {
   top: -10px;
   left: -10px;
 }
+[class^="img-"],
+[class^="fileName-"] {
+  opacity: 0.3;
+}
 [class^="input-container-"] {
   display: flex;
   width: 100%;
@@ -207,7 +211,7 @@ ul {
   opacity: 1;
 }
 /* File Name Styles */
-.fileName {
+[class^="fileName-"] {
   font-weight: bold;
   border: none;
   width: 90%;

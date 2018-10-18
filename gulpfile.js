@@ -96,11 +96,6 @@ gulp.task("scripts-dist", function() {
 });
 
 gulp.task("sassy", function() {
-  gulp
-    .src("sass/**/*.scss")
-    .pipe(sass().on("error", sass.logError))
-    .pipe(gulp.dest("dist/css"));
-
   var plugins = [
     autoprefixer({
       browsers: ["last 1 version"]
@@ -109,7 +104,9 @@ gulp.task("sassy", function() {
   ];
 
   gulp
-    .src("dist/css/**/*.css")
+    .src("sass/**/*.scss")
+    .pipe(sass().on("error", sass.logError))
+    .pipe(gulp.dest("dist/css"))
     .pipe(postcss(plugins))
     .pipe(gulp.dest("dist/css"))
     .on("finish", function() {

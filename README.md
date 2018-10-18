@@ -14,7 +14,6 @@ This is the final result, which took me about 8 hours to implement.
 
 Improvement decisions, which I took:
 
-- Avoid the transparency when files are uploading;
 - Hide the progress-bar when files are uploaded;
 - I had to come up with my own design for the rest of icons (which were not provided on the screenshot).
 - As it was not specified, I did not let to add extra-files for uploading. 

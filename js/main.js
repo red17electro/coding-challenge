@@ -61,7 +61,7 @@ handleFileSelect = evt => {
     var fileName = document.createElement("input");
     fileName.type = "text";
     fileName.setAttribute("value", escape(f.name));
-    fileName.className = "fileName";
+    fileName.className = "fileName-" + i;
     li.appendChild(fileName);
     div.appendChild(img);
     div.appendChild(li);
@@ -93,7 +93,6 @@ handleFileSelect = evt => {
         li.appendChild(progressBar);
 
         reader.onloadstart = function(e) {
-          debugger;
           progressBar.className = "progress_bar loading";
         };
 
@@ -102,9 +101,10 @@ handleFileSelect = evt => {
           percent.style.width = "100%";
           percent.style.opacity = "0";
           progressBar.className = "progress_bar";
-
           status = document.getElementById(status.id);
           var div = status.parentElement;
+          div.querySelector('[class^="fileName-"]').style.opacity = 1;
+          div.querySelector('[class^="img-"]').style.opacity = 1;
           status.remove();
           var img = document.createElement("img");
           img.id = status.id;
